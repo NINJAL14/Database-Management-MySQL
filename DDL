@@ -1,0 +1,120 @@
+CREATE TABLE student( S_id INT(5),S_name VARCHAR(100),S_email VARCHAR(100) ); show table;
+
++------------------+         
+| Tables_in_24co83 |
++------------------+
+| student          |
++------------------+
+1 row in set (0.00 sec)
+
+describe student;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| S_id    | int          | YES  |     | NULL    |       |
+| S_name  | varchar(100) | YES  |     | NULL    |       |
+| S_email | varchar(100) | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+3 rows in set (0.00 sec)
+
+ALTER TABLE student ADD Dept varchar (25); 
+
+Query OK, 0 rows affected (0.48 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+ALTER TABLE student ADD DOB DATE;
+
+Query OK, 0 rows affected (0.50 sec)
+Records: 0  Duplicates: 0  Warnings: 0
+
+describe student1;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| S_id    | int          | YES  |     | NULL    |       |
+| S_name  | varchar(100) | YES  |     | NULL    |       |
+| S_email | varchar(100) | YES  |     | NULL    |       |
+| Dept    | varchar(25)  | YES  |     | NULL    |       |
+| DOB     | date         | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+5 rows in set (0.00 sec)
+
+Rename table student to student1; 
+
+describe student1;
++---------+--------------+------+-----+---------+-------+
+| Field   | Type         | Null | Key | Default | Extra |
++---------+--------------+------+-----+---------+-------+
+| S_id    | int          | YES  |     | NULL    |       |
+| S_name  | varchar(100) | YES  |     | NULL    |       |
+| S_email | varchar(100) | YES  |     | NULL    |       |
+| Dept    | varchar(25)  | YES  |     | NULL    |       |
+| DOB     | date         | YES  |     | NULL    |       |
++---------+--------------+------+-----+---------+-------+
+5 rows in set (0.01 sec)
+
+select * from student1;
+Empty set (0.00 sec)
+
+Create table Example as select * from student1;
+Query OK, 0 rows affected (0.87 sec)
+Records: 0  Duplicates: 0  Warnings: 
+
+show tables;
++------------------+
+| Tables_in_24co83 |
++------------------+
+| Example          |
+| student1         |
++------------------+
+2 rows in set (0.00 sec)
+
+CREATE TABLE Instructor( Inst_id INT(5),Inst_name VARCHAR(100),Inst_email VARCHAR(100),Inst_mobile INT(10),Inst_Designation VARCHAR(100), Inst_Salary VARCHAR(10) ); 
++------------------+
+| Tables_in_24co83 |
++------------------+
+| Example          |
+| Instructor       |
+| student1         |
++------------------+
+3 rows in set (0.00 sec)
+
+CREATE TABLE Course( Course_id INT(5),Course_name VARCHAR(15),Course_credit int(10),Dept_id Varchar(5) );
+Select*from Instructor;
+
++------------------+
+| Tables_in_24co83 |
++------------------+
+| Course           |
+| Example          |
+| Instructor       |
+| student1         |
++------------------+
+4 rows in set (0.00 sec)
+
+CREATE TABLE Dept( Dept_id Varchar(5),Dept_name VARCHAR(100),location Varchar(15),HoD Varchar(20) );
+
++------------------+
+| Tables_in_24co83 |
++------------------+
+| Course           |
+| Dept             |
+| Example          |
+| Instructor       |
+| student1         |
++------------------+
+5 rows in set (0.00 sec)
+
+CREATE TABLE Enrollment( Enroll_id Varchar(5),Student_name VARCHAR(100),Course_id INT(5),Grade Varchar(4),DOB Date );
+
+show tables;
++------------------+
+| Tables_in_24co83 |
++------------------+
+| Course           |
+| Dept             |
+| Enrollment       |
+| Example          |
+| Instructor       |
+| student1         |
++------------------+
