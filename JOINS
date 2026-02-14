@@ -1,0 +1,25 @@
+Example 1: Get employees and their managers
+SELECT e1.name AS Employee, e2.name AS Manager
+FROM employees e1
+INNER JOIN employees e2 ON e1.manager_id = e2.id;
+Example 2: Find students who share the same project
+SELECT s1.name AS Student1, s2.name AS Student2, s1.project_id
+FROM students s1
+INNER JOIN students s2 ON s1.project_id = s2.project_id
+AND s1.id <> s2.id;
+Example 3: List products with similar categories
+SELECT p1.product_name, p2.product_name, p1.category_id
+FROM products p1
+INNER JOIN products p2 ON p1.category_id = p2.category_id
+AND p1.id <> p2.id;
+6. NATURAL JOIN
+Joins tables automatically using columns with the same name and datatype.
+Example 1: Fetch students and their enrolled courses
+SELECT * FROM students
+NATURAL JOIN courses;
+Example 2: Get all employees and their respective departments
+SELECT * FROM employees
+NATURAL JOIN departments;
+Example 3: Retrieve customer orders without specifying join condition
+SELECT * FROM customers
+NATURAL JOIN orders;
