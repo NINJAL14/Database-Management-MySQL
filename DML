@@ -1,0 +1,93 @@
+
+INSERT INTO Instructor (Inst_id,Inst_name,Inst_email,Inst_mobile,Inst_Designation,Inst_Salary) VALUES (1,'Jishan Momin','mominjishan@gmal.com',963852741,'HOD',120653);
+
+mysql> describe Instructor;
++------------------+--------------+------+-----+---------+-------+
+| Field            | Type         | Null | Key | Default | Extra |
++------------------+--------------+------+-----+---------+-------+
+| Inst_id          | int          | YES  |     | NULL    |       |
+| Inst_name        | varchar(100) | YES  |     | NULL    |       |
+| Inst_email       | varchar(100) | YES  |     | NULL    |       |
+| Inst_mobile      | int          | YES  |     | NULL    |       |
+| Inst_Designation | varchar(100) | YES  |     | NULL    |       |
+| Inst_Salary      | varchar(10)  | YES  |     | NULL    |       |
++------------------+--------------+------+-----+---------+-------+
+6 rows in set (0.00 sec)
+
+mysql> Select*from Instructor;
++---------+--------------+----------------------+-------------+------------------+-------------+
+| Inst_id | Inst_name    | Inst_email           | Inst_mobile | Inst_Designation | Inst_Salary |
++---------+--------------+----------------------+-------------+------------------+-------------+
+|       1 | Jishan Momin | mominjishan@gmal.com |   963852741 | HOD              | 120653      |
++---------+--------------+----------------------+-------------+------------------+-------------+
+1 row in set (0.00 sec)
+
+INSERT INTO Instructor (Inst_id,Inst_name,Inst_email,Inst_mobile,Inst_Designation,Inst_Salary) VALUES (2,'Bobby Momin','boby@gmal.com',597531136,'Peon',40000);
+
+Select*from Instructor;
++---------+--------------+----------------------+-------------+------------------+-------------+
+| Inst_id | Inst_name    | Inst_email           | Inst_mobile | Inst_Designation | Inst_Salary |
++---------+--------------+----------------------+-------------+------------------+-------------+
+|       1 | Jishan Momin | mominjishan@gmal.com |   963852741 | HOD              | 120653      |
+|       2 | Bobby Momin  | boby@gmal.com        |   597531136 | Peon             | 40000       |
++---------+--------------+----------------------+-------------+------------------+-------------+
+
+INSERT INTO Instructor (Inst_id,Inst_name,Inst_email,Inst_mobile,Inst_Designation,Inst_Salary) VALUES (3,'Varun Dhawan','varun123@gmal.com',36275416,'Assit Proessor',400000);
+INSERT INTO Instructor (Inst_id,Inst_name,Inst_email,Inst_mobile,Inst_Designation,Inst_Salary) VALUES (4,'Kamran Mulla','Kamran123@gmal.com',778895416,'Assit Proessor',400000);
+INSERT INTO Instructor (Inst_id,Inst_name,Inst_email,Inst_mobile,Inst_Designation,Inst_Salary) VALUES (5,'Gorilla','momkey@gmal.com',99685161,'Assit Proessor',96000);
+INSERT INTO Instructor (Inst_id,Inst_name,Inst_email,Inst_mobile,Inst_Designation,Inst_Salary) VALUES (6,'MOHIB lambe','Jio33623@gmal.com',45285416,'Assit Proessor',100000);
+INSERT INTO Instructor (Inst_id,Inst_name,Inst_email,Inst_mobile,Inst_Designation,Inst_Salary) VALUES (7,'Kalu kala','oop123@gmal.com',38654416,'Assit Proessor',630000);
+
++---------+--------------+----------------------+-------------+------------------+-------------+
+| Inst_id | Inst_name    | Inst_email           | Inst_mobile | Inst_Designation | Inst_Salary |
++---------+--------------+----------------------+-------------+------------------+-------------+
+|       1 | Jishan Momin | mominjishan@gmal.com |   963852741 | HOD              | 120653      |
+|       2 | Bobby Momin  | boby@gmal.com        |   597531136 | Peon             | 40000       |
+|       3 | Varun Dhawan | varun123@gmal.com    |    36275416 | Assit Proessor   | 400000      |
+|       4 | Kamran Mulla | Kamran123@gmal.com   |   778895416 | Assit Proessor   | 400000      |
+|       5 | Gorilla      | momkey@gmal.com      |    99685161 | Assit Proessor   | 96000       |
+|       6 | MOHIB lambe  | Jio33623@gmal.com    |    45285416 | Assit Proessor   | 100000      |
+|       7 | Kalu kala    | oop123@gmal.com      |    38654416 | Assit Proessor   | 630000      |
++---------+--------------+----------------------+-------------+------------------+-------------+
+
+INSERT INTO Instructor (Inst_id,Inst_name,Inst_email,Inst_mobile,Inst_Designation,Inst_Salary) VALUES (8,'Justin Biber','Salenagomez69@gmal.com',86654416,'Proessor',623000);
+INSERT INTO Instructor (Inst_id,Inst_name,Inst_email,Inst_mobile,Inst_Designation,Inst_Salary) VALUES (9,'Harry Styles','one direction123@gmal.com',52654416,'Assit Proessor',630000);
+INSERT INTO Instructor (Inst_id,Inst_name,Inst_email,Inst_mobile,Inst_Designation,Inst_Salary) VALUES (10,'Aston Hally','Ishowspeed123@gmal.com',87654416,'Phd Proessor',980000);
+
+
+Select*from Instructor;
++---------+--------------+---------------------------+-------------+------------------+-------------+
+| Inst_id | Inst_name    | Inst_email                | Inst_mobile | Inst_Designation | Inst_Salary |
++---------+--------------+---------------------------+-------------+------------------+-------------+
+|       1 | Jishan Momin | mominjishan@gmal.com      |   963852741 | HOD              | 120653      |
+|       2 | Bobby Momin  | boby@gmal.com             |   597531136 | Peon             | 40000       |
+|       3 | Varun Dhawan | varun123@gmal.com         |    36275416 | Assit Proessor   | 400000      |
+|       4 | Kamran Mulla | Kamran123@gmal.com        |   778895416 | Assit Proessor   | 400000      |
+|       5 | Gorilla      | momkey@gmal.com           |    99685161 | Assit Proessor   | 96000       |
+|       6 | MOHIB lambe  | Jio33623@gmal.com         |    45285416 | Assit Proessor   | 100000      |
+|       7 | Kalu kala    | oop123@gmal.com           |    38654416 | Assit Proessor   | 630000      |
+|       8 | Justin Biber | Salenagomez69@gmal.com    |    86654416 | Proessor         | 623000      |
+|       9 | Harry Styles | one direction123@gmal.com |    52654416 | Assit Proessor   | 630000      |
+|      10 | Aston Hally  | Ishowspeed123@gmal.com    |    87654416 | Phd Proessor     | 980000      |
++---------+--------------+---------------------------+-------------+------------------+-------------+
+
+describe Dept;
+
++-----------+--------------+------+-----+---------+-------+
+| Field     | Type         | Null | Key | Default | Extra |
++-----------+--------------+------+-----+---------+-------+
+| Dept_id   | varchar(5)   | YES  |     | NULL    |       |
+| Dept_name | varchar(100) | YES  |     | NULL    |       |
+| location  | varchar(15)  | YES  |     | NULL    |       |
+| HoD       | varchar(20)  | YES  |     | NULL    |       |
++-----------+--------------+------+-----+---------+-------+
+
+INSERT INTO Dept (Dept_id,Dept_name,location,HoD) VALUES (1,'Computer Engineering','3rd floor','Sachin Tendulkar');
+
+Select*from Dept;
+
++---------+----------------------+-----------+------------------+
+| Dept_id | Dept_name            | location  | HoD              |
++---------+----------------------+-----------+------------------+
+| 1       | Computer Engineering | 3rd floor | Sachin Tendulkar |
++---------+----------------------+-----------+------------------+
